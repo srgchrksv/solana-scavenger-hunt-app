@@ -17,7 +17,7 @@ const QrCodePage = () => {
   // Create the QR code when the `id` parameter or `reference` changes
   useEffect(() => {
     createQRCode(qrRef, reference, id as string)
-  }, [reference])
+  }, [id, reference])
 
   // Periodically check the transaction status and reset the `reference` state variable once confirmed
   useEffect(() => {
